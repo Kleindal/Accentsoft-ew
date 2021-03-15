@@ -5,6 +5,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 *,
 *:after,
@@ -23,6 +24,10 @@ a, a:link, a:visited, a:active, a:hover {
   color: white;
 }
 
+body {
+  margin: 0;
+  top: 0;
+}
 
 .header {
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.199);
@@ -35,7 +40,6 @@ a, a:link, a:visited, a:active, a:hover {
 }
 
 .header ul {
-
   list-style: none;
   overflow: hidden;
   margin-top: 10px;
@@ -49,7 +53,6 @@ a, a:link, a:visited, a:active, a:hover {
   display: block;
   color: #4cf019;
   text-transform: uppercase;
-
   font: 18px 'Abel', sans-serif;
 }
 
@@ -200,23 +203,33 @@ a:hover{
 .first-banner{
   height: 980px;
   margin-bottom: 6em;
-  background-image: url("../img/paint-4191399_1920.jpg");
+  background-image: url('/assets/img/paint-4191399_192.jpg');
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 
-.first-banner div h3{
+.first-banner{
   display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: left;
   justify-content: center;
-  padding-top: 300px;
-  color: white;
-  font-family: 'Abel', sans-serif;
-  font-size: 50px;
+  color: #000;
+
 }
 
+.first-banner-content div{
+  font-family: 'Audiowide', sans-serif;
+  font-size: 70px;
+  text-align: center;
+}
+
+.first-banner-content div h4 {
+
+}
 .second-banner {
   height: 800px;
 }
@@ -402,7 +415,7 @@ a:hover{
     height: 980px;
     width: 100%;
     margin-bottom: 6em;
-    background-image: url("../img/paint-4191399_1920.jpg");
+    background-color: #696969;
 
   }
 }
