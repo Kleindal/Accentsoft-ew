@@ -20,6 +20,23 @@
   background: #696969;
 }
 
+.svg-icon {
+  width: 2.5em;
+  height: 2.5em;
+  margin-right: 15px;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #000;
+}
+
+.svg-icon circle {
+  stroke: #000;
+  stroke-width: 1;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -63,7 +80,7 @@ body {
 }
 
 .header {
-  background-color: #5f5f5f;
+  background-color: #fff;
 }
 
 .header li a {
@@ -72,7 +89,7 @@ body {
   text-transform: uppercase;
   font: 18px 'Abel', sans-serif;
   padding: 10px;
-  background-color: #5f5f5f;
+  background-color: #fff;
 }
 
 
@@ -83,13 +100,19 @@ body {
 ;
 }
 
-.header .logo {
+.header .logo-text {
   display: block;
   float: left;
   padding: 12px 20px;
   text-decoration: none;
 }
 
+.logo-text p{
+  font: 1.6em 'Audiowide', sans-serif;
+  color: #000;
+  line-height: 2.6em;
+  text-transform: uppercase;
+}
 /* menu */
 
 .header .menu {
@@ -294,26 +317,34 @@ body {
 }
 
 .one-up {
-  background-color: #808080;
+  background-color: #fff;
 }
 
 .two-up {
   background-color: #4cf019;
 }
 
+
+.second-banner {
+  display: inline-grid;
+  grid-gap: 10px;
+  grid-auto-flow: row;
+  grid-template-columns: 2fr;
+}
+
 .second-banner, .third-banner {
-  height: 800px;
   width: auto;
-  margin: 4em;
+  margin: 4em 1em 4em 1em;
   display: flex;
   align-items: center;
   cursor: default;
-  padding-top: 2em;
+  padding-top: 10em;
+  padding-bottom: 1em;
 }
 
 .second-banner-content {
-  display: flex;
-  align-items: center;
+  height: auto;
+  width: 500px;
 }
 
 .second-banner-content div p {
@@ -342,13 +373,33 @@ body {
   transition: width .4s;
 }
 
-.imgslide {
+.bloc-imgslide {
+  position: relative;
+  background-color: blue;
+  width: 100%;
+}
+
+.bloc-imgslide::after {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+
+.bloc-imgslide .content-imgslide picture img{
+  position: absolute;
+  width: 100%;
+  margin: 1em;
+}
+
+
+
+.imgslides {
   opacity: 1;
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 }
 
-.imgslide:hover {
+.imgslides:hover {
 	opacity: 0.5;
 }
 
@@ -409,19 +460,14 @@ body {
 }
 .footer-container .contact-info ul.info li {
   display: flex;
-  margin: 20px 0;
+  margin: 10px;
   position: relative;
   cursor: pointer;
-  align-items: flex-start;
-}
-.footer-container .contact-info ul.info li span img {
-  padding-right: 15px;
-  height: 30px;
-  filter: invert(0);
 }
 .footer-container .contact-info ul.info li span:nth-child(2) {
   color: #000;
   font-weight: 500;
+  margin-top: 6px;
 }
 .footer-container .contact-form {
   font-family: 'Abel', sans-serif;
