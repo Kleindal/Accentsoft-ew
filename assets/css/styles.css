@@ -163,6 +163,16 @@ main {
   display: none;
 }
 
+.logo-icon {
+  width: 60%;
+  max-height: 100%;
+  min-width: 340px;
+  display: inline-block;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
 .first-banner{
   display: flex;
   align-items: center;
