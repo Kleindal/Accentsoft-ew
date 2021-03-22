@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -55,54 +55,41 @@
         <div class="nav-title">CR-ETANCHE</div>
       </div>
       <div class="nav-btn">
-        <label for="nav-check">
+        <label for="nav-check" id="nav-check">
           <span></span>
           <span></span>
           <span></span>
         </label>
       </div>
-      <div class="nav-links">
-        <a href="#">Accueil</a>
+      <div class="nav-links" id="btn_hide" >
+        <a href="index.html">Accueil</a></li>
         <a href="#about" onclick="scrollToElement('#about', 700)">Société</a>
         <a href="#galery" onclick="scrollToElement('#galery', 700)">Galerie</a>
         <a href="#section-footer" onclick="scrollToElement('#section-footer', 700)">Contact</a>
       </div>
     </div>
-    <!-- <nav>
-      <div class="">
-        <div class="">
-          <a href="index.html" class=""><p>cr-etanche</p></a>
-
-          <input class="menu-btn" type="checkbox" id="menu-btn" />
-          <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-
-          <ul class="menu">
-            <li><a href="#about" onclick="scrollToElement('#about', 700)">LA SOCIÉTÉ</a></li>
-            <li><a href="#galery" onclick="scrollToElement('#galery', 700)">GALERIE</a></li>
-            <li><a href="#section-footer" onclick="scrollToElement('#section-footer', 700)">CONTACT</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav> -->
   </header>
   <section class="first-banner">
     <div class="container">
-      <div data-aos="fade-up" data-aos-duration="1000" data-aos-offset="150" data-aos-delay="400">
-        <h2>-&nbsp;Étanchéité</h2>
-        <h2>-&nbsp;Isolation</h2>
-      </div><br><br><br>
-      <div data-aos="fade-up" data-aos-duration="1000" data-aos-offset="150" data-aos-delay="600">
-        <h1>CR-ETANCHE</h1>
-      </div><br>
-      <div data-aos="fade-up" data-aos-duration="1000" data-aos-offset="150" data-aos-delay="800">
-        <h2>Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit.</h2>
-      </div><br>
-      <div data-aos="fade-up" data-aos-duration="1000" data-aos-offset="150" data-aos-delay="1000"
-      ><p>Lorem ipsum</p>
-    </div>
-      <div class="container">
-        <a href="#section-footer" onclick="scrollToElement('#section-footer', 1100)"></a>
+      <div>
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="100">
+          <h2>-&nbsp;Étanchéité</h2>
+          <h2>-&nbsp;Isolation</h2>
+        </div><br><br><br>
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="300">
+          <h1>CR-ETANCHE</h1>
+        </div><br>
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="550">
+          <h2>Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit.</h2>
+        </div><br>
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-delay="650"
+        ><p>Lorem ipsum</p>
+        </div>
+        <div class="container">
+          <a href="#section-footer" onclick="scrollToElement('#section-footer', 1100)"></a>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -261,7 +248,7 @@
       <div class="contact-form">
         <h2>SEND A MESSAGE</h2>
         <div class="formBox">
-          <div class="inputBox w50">
+          <div class="inputBox w40">
             <input type="text" aria-labelledby="name" aria-required="true" required>
             <span>Nom Prénom</span>
           </div>
@@ -302,18 +289,6 @@
 }
 </script>
 <script>
-  var myIndex = 0;
-  carousel();
-  function carousel() {
-    var i;
-    var x = document.getElementsByClassName("imgslides");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}
-    x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 4000); // Change image every 2 seconds
-  }
-  </script>
+  $('#btn_hide').click( () => $('#nav-check').click());
+</script>
 </html>

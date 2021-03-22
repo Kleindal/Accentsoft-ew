@@ -76,8 +76,8 @@ main {
 .header {
   box-shadow: 1px 1px 6px 0 rgba(0, 0, 0, 0.4);
   position: fixed;
-  width: 100%;
-  z-index: 1000;
+  width: 100vh;
+  z-index: 1000!important;
   top: 0;
   height: 6em;
   display: inline;
@@ -170,56 +170,6 @@ main {
   display: none;
 }
 
-@media (max-width:600px) {
-  .nav > .nav-btn {
-    display: inline-block;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-  }
-  .nav > .nav-btn > label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 25px 50px 39px 25px;
-  }
-  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  .nav > .nav-btn > label > span {
-    display: block;
-    width: 30px;
-    height: 7px;
-    border-top: 2px solid #eee;
-  }
-  .nav > .nav-links {
-    position: absolute;
-    display: block;
-    width: 100%;
-    background-color: #333;
-    height: 0px;
-    transition: all 0.4s ease-in;
-    overflow-y: hidden;
-    top: 64px;
-    left: 0px;
-  }
-  .nav > .nav-links > a {
-    display: block;
-    width: 100%;
-  }
-  .nav > #nav-check:not(:checked) ~ .nav-links {
-    height: 0px;
-  }
-  .nav > #nav-check:checked ~ .nav-links {
-    height: calc(100vh - 50px);
-    overflow-y: auto;
-  }
-}
-
-
-
-
-
 .first-banner{
   display: flex;
   width: 100vh;
@@ -269,7 +219,7 @@ main {
 
 .imgContent img {
   border-radius: 50%;
-  border: 5px solid #4cf019;
+
 }
 
 .imgContent img:hover {
@@ -410,12 +360,12 @@ main {
 .footer-container .contact-info {
   font-family: 'Abel', sans-serif;
   position: absolute;
-  top: 60px;
+  top: 70px;
   width: 300px;
-  height: calc(100% - 80px);
+  /* height: calc(100% - 80px); */
   background-color: #4cf019;
   z-index: 1;
-  padding: 40px;
+  padding: 30px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -548,15 +498,80 @@ main {
   }
 }
 
+
+@media (max-width:600px) {
+
+}
+
 @media (max-width: 600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 25px 50px 39px 25px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 30px;
+    height: 7px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.4s ease-in;
+    overflow-y: hidden;
+    top: 64px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+    overflow-y: hidden;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(50vh - 50px);
+  }
   .footer-container .contact-form,
-  .footer-container .contact-form {
+  .footer-container .contact-info {
     padding: 25px;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-between;
+    z-index: -3000!important;
   }
   .footer-container .contact-info ul.sci {
-    margin-top: ;
+    margin-top: 1em;
+  }
+  .first-banner {
+    height: 1000px;
+    width: 100%;
+    background-color: #696969;
+  }
+  .fb-content-text {
+    display: block;
+    text-align: left;
+  }
+  .fb-content-logo {
+    flex-direction: column;
+  }
+  .fb-content-logo h2 {
+    padding-left: 20px;
   }
   .text-3 {
     display: block;
@@ -565,35 +580,18 @@ main {
     margin-right: 10%;
   }
 
-  .first-banner {
-    width: 80%;
-    padding-left: 1em;
-  }
-  .fb-content-text {
-    display: block;
-    text-align: left;
-
-  }
-  .fb-content-logo {
-    flex-direction: column;
-  }
-
-  .fb-content-logo h2 {
-    padding-left: 20px;
-  }
-
 }
 
 @media screen and (max-width: 991px) {
   .footer-container {
-    width: 70%;
+    width: 80%;
     min-width: auto;
     margin: 10px;
+    z-index: initial;
   }
 
   .footer-container .contact-info {
     top: 0;
-    height: 500px;
     position: relative;
     box-shadow: none;
   }
@@ -609,7 +607,7 @@ main {
   }
 
   #section-footer {
-    background: grey;
+    background: transparent;
     padding-top: 6em;
   }
   #section-footer::before {
@@ -627,35 +625,7 @@ main {
   }
 }
 
-
-@media (min-width: 48em) {
-  .header li {
-    float: left;
-  }
-  .header li a {
-    padding: 20px 30px;
-  }
-  .header li a:hover {
-    border-bottom: none;
-  }
-
-  .header .menu {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
-  .header .menu-icon {
-    display: none;
-  }
-}
-
-
 @media screen and (min-width: 1005px) {
-  .first-banner {
-    height: 980px;
-    width: 100%;
-    background-color: #696969;
-  }
 
 }
 @media screen and (max-width: 1005px) {
@@ -664,10 +634,6 @@ main {
     width: 100%;
     background-color: #696969;
   }
-}
-
-@media screen and (min-width: 1400px) {
-
 }
 
 @media screen and (max-width: 1400px) {
