@@ -77,7 +77,6 @@ main {
   box-shadow: 1px 1px 6px 0 rgba(0, 0, 0, 0.4);
   position: fixed;
   width: 100vh;
-  z-index: 1000!important;
   top: 0;
   height: 6em;
   display: inline;
@@ -128,6 +127,7 @@ main {
   width: 100%;
   background-color: #4d4d4d;
   position: fixed;
+  z-index: 1;
 }
 
 .nav > .nav-header {
@@ -178,7 +178,6 @@ main {
   justify-content: center;
   color: #000;
   padding-bottom: 4em;
-  z-index: -3000;
 }
 
 .first-banner-content div {
@@ -259,7 +258,6 @@ main {
   align-items: center;
   background-color: transparent;
   margin: 3em 2em 4em 2em;
-  z-index: -3000;
 
 }
 
@@ -331,6 +329,8 @@ main {
   flex-direction: column;
 }
 
+
+
 #section-footer {
   display: flex;
   justify-content: center;
@@ -347,7 +347,6 @@ main {
   top: auto;
   left: 0;
   background: #808080;
-  z-index: -1000;
 }
 
 .footer-container {
@@ -355,7 +354,6 @@ main {
   position: relative;
   min-width: 980px;
   min-height: 425px;
-  z-index: 1;
 }
 .footer-container .contact-info {
   font-family: 'Abel', sans-serif;
@@ -364,13 +362,13 @@ main {
   width: 300px;
   /* height: calc(100% - 80px); */
   background-color: #4cf019;
-  z-index: 1;
   padding: 30px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+  z-index: 1;
 }
 .footer-container .contact-info h2{
   color: #000;
@@ -553,7 +551,6 @@ main {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    z-index: -3000!important;
   }
   .footer-container .contact-info ul.sci {
     margin-top: 1em;
@@ -587,7 +584,6 @@ main {
     width: 80%;
     min-width: auto;
     margin: 10px;
-    z-index: initial;
   }
 
   .footer-container .contact-info {
@@ -607,12 +603,10 @@ main {
   }
 
   #section-footer {
-    background: transparent;
     padding-top: 6em;
   }
   #section-footer::before {
     display: none;
-    z-index: 1000;
   }
   #section-footer .footer-container{
     display: flex;
@@ -625,15 +619,13 @@ main {
   }
 }
 
-@media screen and (min-width: 1005px) {
-
-}
 @media screen and (max-width: 1005px) {
   .first-banner {
     height: 980px;
     width: 100%;
     background-color: #696969;
   }
+
 }
 
 @media screen and (max-width: 1400px) {
