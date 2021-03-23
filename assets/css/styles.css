@@ -530,7 +530,7 @@ main {
     height: 0px;
   }
   .nav > #nav-check:checked ~ .nav-links {
-    height: calc(44vh - 100px);
+    height: calc(100vh - 50px);
   }
   .footer-container .contact-form,
   .footer-container .contact-info {
